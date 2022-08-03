@@ -30,14 +30,15 @@ function linkAction(){
 navLink.forEach(n => n.addEventListener('click',linkAction))
 
 /*==================== ACCORDION SKILLS ====================*/
-const skillsContent = document.getElementsByClassName('skills__content'),
-    skillsHeader = document.querySelectorAll('.skills__header')
+const skillsContent = document.getElementsByClassName('skills__content'), 
+      skillsHeader = document.querySelectorAll('.skills__header')
 
 function toggleSkills(){
     let itemClass = this.parentNode.ClassName
-
+    console.log(skillsContent.length)
     for(i = 0; i < skillsContent.length; i++){
-        skillsContent[i].className='skills__content skills__close'
+        skillsContent[i].className = 'skills__content skills__close'
+        
     }
     if(itemClass === 'skills__content skills__close'){
         this.parentNode.className = 'skills__content skills__open'
@@ -45,12 +46,28 @@ function toggleSkills(){
 }
 
 skillsHeader.forEach((eL) =>{
-    eL.addEventListener('click',toggleSkills)
+    eL.addEventListener('click', toggleSkills)
 })
 
 /*==================== QUALIFICATION TABS ====================*/
+const tabs = document.querySelectorAll('[data-target]'),
+    tabContents= document.querySelectorAll('[data-content]')
 
+    tabs.forEach(tab =>{
+        tabs.addEventListener('click', ()=>{
+            const target = document.querySelector(tab.dataset.target)
 
+            tabContents.forEach(tabContent =>{
+                tabContent.classList.remove('qualification__active')
+            })
+            target.classList.add('qualicication__active')
+
+            tabs.forEach(tab =>{
+                tab.classList.remove('qualification__active')
+            })
+            tab.classList.add('qualification__active')
+        })
+    })
 /*==================== SERVICES MODAL ====================*/
 
 

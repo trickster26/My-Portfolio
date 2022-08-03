@@ -242,8 +242,9 @@
                         </div>
                     </div>
                 </div>
-                <!--==================== SKILLS 3====================-->
                 <div>
+                <!--==================== SKILLS 3====================-->
+                
                     <div class="skills__content skills__close">
                         <div class="skills__header">
                             <i class="uil uil-swatchbook skills__icon"></i>
@@ -285,12 +286,61 @@
                         </div>
                     </div>
                 </div>
-                </div>
+            </div>
             </section>
 
             <!--==================== QUALIFICATION ====================-->
             <section class="qualification section">
+                <h2 class="section__title">Qualification</h2>
+                <span class="section__subtitle">My personal journey</span>
+                <div class="qualification__container container">
+                    <div class="qualification__tabs">
+                        <div class="qualification__button button--flex qualification__active" data-target="#education">
+                            <i class="uil uil-graduation-cap qualification__icon"></i>
+                            Education
+                        </div>
 
+                        <div class="qualification__section">
+                            <!-- =========================QUALIFICATION CONTENT 1 ========================-->
+                            <div class="qualification__content qualification__active" data-content id="education">
+                                <div></div>
+                                <div>
+                                    <span class="qualification__rounder"></span>
+                                    <span class="qualification__line"></span>
+                                </div>
+                                <div>
+                                    <h3 class="qualifiaction__title">Computer Science and Enginnering</h3>
+                                    <span class="qualification__subtitle">I.K.G. Punjab technical University</span>
+                                    <div class="qualification__calendar">
+                                        <i class="uil uil-calendar-alt"></i>
+                                        2019-Present
+                                    </div>
+                                </div>
+
+                                
+                            </div>
+
+                            <!-- =========================QUALIFICATION CONTENT 2 ========================-->
+                            <div class="qualification__content">
+                                <div></div>
+                                <div>
+                                    <span class="qualification__rounder"></span>
+                                    <span class="qualification__line"></span>
+                                </div>
+                                <div>
+                                    <h3 class="qualifiaction__title">HSC</h3>
+                                    <span class="qualification__subtitle">Shivalik Public School</span>
+                                    <div class="qualification__calendar">
+                                        <i class="uil uil-calendar-alt"></i>
+                                        2018-2019
+                                    </div>
+                                </div>
+
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
 
             <!--==================== SERVICES ====================-->
@@ -332,26 +382,6 @@
 
         <!--==================== MAIN JS ====================-->
         <script src="assets\js\main.js"></script>
-        <script>
-            let stars = document.getElementById('stars');
-            let moon = document.getElementById('moon');
-            let mountains_behind = document.getElementById('mountains_behind');
-            let text = document.getElementById('text');
-            let mountains_front = document.getElementById('mountains_front');
-            
-            window.addEventListener('scroll',function(){
-                let value = window.scrollY;
-                
-                stars.style.left = value*0.25 + 'px';
-                moon.style.top = value*1.05 + 'px';
-                mountains_behind.style.top = value*0.05 + 'px';
-                mountains_front.style.top = value*0 + 'px';
-                text.style.marginRight = value*4 + 'px';
-                text.style.marginTop = value*1.5 + 'px';
-            })
-            
-            
-        </script>
 
     </body>
 
