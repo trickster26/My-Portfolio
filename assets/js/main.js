@@ -30,7 +30,7 @@ function linkAction(){
 navLink.forEach(n => n.addEventListener('click',linkAction))
 
 /*==================== ACCORDION SKILLS ====================*/
-var skillsContent = document.getElementsByClassName('skills__content'), 
+const skillsContent = document.getElementsByClassName('skills__content'), 
       skillsHeader = document.querySelectorAll('.skills__header')
 
 function toggleSkills(){
@@ -92,7 +92,7 @@ modalCloses.forEach((modalClose) => {
     })
 })
 /*==================== PORTFOLIO SWIPER  ====================*/
-var swiper = new Swiper(".portfolio__container", {
+var swiperPortfolio = new Swiper(".portfolio__container", {
     cssMode: true,
     loop: true,
     navigation: {
@@ -106,7 +106,23 @@ var swiper = new Swiper(".portfolio__container", {
   });
 
 /*==================== TESTIMONIAL ====================*/
+var swiperTestimonial = new Swiper(".testimonial__container", {
+    loop: true,
+    grabCursor:true,
+    space:48,
 
+    
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+      dynamicBullets: true,
+    },
+    breakpoints:{
+        568:{
+            slidesPerView: 2,
+        }
+    }
+  });
 
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
 
