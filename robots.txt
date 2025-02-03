@@ -1,0 +1,21 @@
+# www.robotstxt.org/
+# Allow crawling of all content
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://anukumar.run.place/sitemap.xml
+
+# Disallow crawling of specific files/directories (if needed)
+Disallow: /private/
+Disallow: /admin/
+Disallow: /temp/
+Disallow: /*.pdf$
+Disallow: /*?*
+
+# Crawl-delay for specific bots (optional)
+User-agent: Googlebot
+Crawl-delay: 1
+
+User-agent: Bingbot
+Crawl-delay: 1 
